@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1570550113 source:z:\mes documents\c\tp2\exo2\main.c
+	<stdio.h>
+	<stdlib.h>
+
