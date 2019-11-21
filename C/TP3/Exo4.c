@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-/* Version Variables globales
+/* Version Variables globales */
 #define taille 20
 
 
@@ -19,13 +19,23 @@ void affiche(){
     for(i=0;i<taille;i++)
         printf("tab[%d]=%d\n",i,tab[i]);
 }
+int max(){
+    int i=0;
+    int maxi=tab[i];
+    for(i=1;i<taille;i++)
+        if (maxi<tab[i]) {maxi=tab[i];};
+    return maxi;
+}
 
 int main () {
+    int maximum;
     remplissage();
     affiche();
+    maximum=max();
+    printf("Le maximum de ce tableau est %d\n", maximum);
     return 0;
 }
-*/
+
 
 /* Version variable locale
 #define taille 20
@@ -51,7 +61,7 @@ int main () {
 }
 */
 
-/* Version taille tableau inconnue*/
+/* Version taille tableau inconnue
 
 void remplissage(int tab[], int taille){
     int i;
@@ -71,3 +81,4 @@ int main () {
     affiche(tab,10);
     return 0;
 }
+*/

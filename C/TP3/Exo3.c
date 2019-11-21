@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-/* Version Variables globales
+/* Version Variables globales */
 #define taille 20
 
 
@@ -19,13 +19,26 @@ void affiche(){
     for(i=0;i<taille;i++)
         printf("tab[%d]=%d\n",i,tab[i]);
 }
+void inverse(){
+    int i, cpt, stock;
+    i=0;
+    cpt=taille-1;
+    while (i<cpt){
+        stock=tab[i];
+        tab[i]=tab[cpt];
+        tab[cpt]=stock;
+        i++;cpt--;
+    }
+}
 
 int main () {
     remplissage();
     affiche();
+    inverse();
+    affiche();
     return 0;
 }
-*/
+
 
 /* Version variable locale
 #define taille 20
@@ -51,7 +64,7 @@ int main () {
 }
 */
 
-/* Version taille tableau inconnue*/
+/* Version taille tableau inconnue
 
 void remplissage(int tab[], int taille){
     int i;
@@ -71,3 +84,4 @@ int main () {
     affiche(tab,10);
     return 0;
 }
+*/

@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-/* Version Variables globales
+/* Version Variables globales */
 #define taille 20
 
 
@@ -19,13 +19,56 @@ void affiche(){
     for(i=0;i<taille;i++)
         printf("tab[%d]=%d\n",i,tab[i]);
 }
+void inverse(){
+    int i, cpt, stock;
+    i=0;
+    cpt=taille-1;
+    while (i<cpt){
+        stock=tab[i];
+        tab[i]=tab[cpt];
+        tab[cpt]=stock;
+        i++;cpt--;
+    }
+}
+
+void tri(){
+    int i=1;
+    int j;
+    int petit;
+    while (i<=(taille-1)) {
+        petit=tab[i];
+        j=i-1;
+        while (j>=0 && petit<tab[j]) {
+            tab[j+1]=tab[j];
+            j=j-1;
+        }
+        tab[j+1]=petit;
+        i++;
+    }
+
+}
+
+void max(){
+    int i=0;
+    int max=tab[i];
+    int max2=tab[i+1];
+    int stock;
+    for(i=2;i<taille;i++) {
+        if (max>max2) {stock=max;max=max2;max2=stock;};
+        if (max<tab[i]) {max=tab[i];};
+    }
+    printf("Les max de ce tableau sont %d puis %d\n", max2, max);
+}
+
 
 int main () {
     remplissage();
     affiche();
+    tri();
+    affiche();
     return 0;
 }
-*/
+
 
 /* Version variable locale
 #define taille 20
@@ -51,7 +94,7 @@ int main () {
 }
 */
 
-/* Version taille tableau inconnue*/
+/* Version taille tableau inconnue
 
 void remplissage(int tab[], int taille){
     int i;
@@ -71,3 +114,4 @@ int main () {
     affiche(tab,10);
     return 0;
 }
+*/

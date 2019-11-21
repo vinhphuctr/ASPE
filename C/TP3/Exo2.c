@@ -61,8 +61,8 @@ void remplissage(int tab[], int taille){
 }
 void affiche(int tab[], int taille){
     int i;
-    for(i=0;i<taille;i++)
-        printf("tab[%d]=%d\n",i,tab[i]);
+    for(i=0;i<taille;taille--)
+        printf("tab[%d]=%d\n",taille,tab[taille]);
 }
 
 int main () {
