@@ -185,29 +185,32 @@ void max(int tab[], int taille){
     printf("Le maximum de ce tableau est %d\n", maxi);
 }
 
+int controle(char z) {
+    int teste=0;
+    z=getchar();
+    while (z<='9' && z>='0') {
+        teste=(z-48)+teste*10;
+        z=getchar();
+    }
+    if (z!='\n'){teste=-1;}
+    return teste;
+}
+
 int main () {
     int taille;
-    int choix=0;
+    int choix;
     char c;
 
     printf("Quelle est la taille du tableau que vous souhaitez manipuler ? \n");
-    scanf("%d",&taille);
-
-    while (getchar()!='\n');
-
+    taille=controle(c);
     int tab[taille];
+
     printf("Que souhaitez vous faire ?\n");
     printf("Pour afficher le tableau tapez 1\nPour inverser le tableau tapez 2\n");
     printf("Pour trier le tableau tapez 3\nPour afficher le minimum du tableau tapez 4\n");
     printf("Pour afficher le maximum du tableau tapez 5\nPour afficher les deux maximum du tableau tapez 6\n");
 
-    c=getchar();
-
-    while (c<='9' && c>='0') {
-        choix=(c-48)+choix*10;
-        c=getchar();
-    }
-    if (c!='\n'){choix=-1;}
+    choix=controle(c);
 
     remplissage(tab,taille);
     switch(choix) {
