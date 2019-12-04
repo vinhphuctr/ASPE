@@ -3,14 +3,15 @@
 #include <math.h>
 #include <stdbool.h>
 
-#define M 5
-#define N 5
+#define M 4
+#define N 4
+
 
 void remplir(int tab[N][M]) {
     int i,j;
     for(i=0;i<N;i++) {
         for (j=0;j<M;j++) {
-            tab[i][j]=2;
+            tab[i][j]=1;
         }
     }
 }
@@ -24,12 +25,12 @@ void afficher(int tab[N][M]) {
     }
 }
 
-bool estBooleenne(int matrice[N][M], int nbCol, int nbLigne){
+bool estSymetrique(int matrice[N][M], int nbCol, int nbLigne){
   int i,j;
   bool res=true;
   for (i=0;i<nbCol;i++) {
     for (j=0;j<nbLigne; j++) {
-        if (matrice[i][j] != 0 && matrice[i][j] != 1) {
+        if (matrice[i][j] != matrice[j][i]) {
             return false;
         }
     }
@@ -38,10 +39,9 @@ bool estBooleenne(int matrice[N][M], int nbCol, int nbLigne){
 }
 
 int main(){
-    int matrice[N][M];
-    remplir(matrice);
+    int matrice[N][M]={{1,0,0,0},{0,1,1,0},{1,0,1,0},{1,0,1,1}};
     afficher(matrice);
-    if (estBooleenne(matrice,5,5)) { printf("Elle est booleenne.");};
-    if (!estBooleenne(matrice,5,5)) { printf("Elle n'est pas booleenne.");};
+    if (estSymetrique(matrice,4,4)) { printf("Elle est symetrique.");};
+    if (!estSymetrique(matrice,4,4)) { printf("Elle n'est pas symetrique.");};
     return 0;
 }
