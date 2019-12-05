@@ -1,0 +1,102 @@
+/* standard elements */
+
+html {
+	margin: 0;
+	padding: 0;
+    background: url(img/SaintDalmas.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    --couleurtitre:#BBB;
+    --couleurtexte:#DDD;
+	--couleurlien:yellow;
+	--couleurfond:rgba(30,30,30,0.5);
+}
+
+a {color: var(--couleurtexte);}
+
+a:hover {color: var(--couleurlien);}
+
+body {
+	font: normal 62.5% "Lucida Sans Unicode",sans-serif;
+	margin: 0;
+}
+
+p {
+	margin-bottom: 1.2em;
+	font-size:1.4em;
+}
+
+h1 {font: normal 1.6em serif;}
+
+h2 {
+	font: bold 1.3em Verdana,serif;
+	margin: 3px 0 1px;
+}
+
+
+/* structure */
+.container {
+	margin:auto;
+	width: 60%;
+    background-color: var(--couleurfond);
+    color: var(--couleurtexte);
+}
+
+.top {
+	background-color: var(--couleurfond);
+    width: 60%;
+	float: center;
+	text-align: center;
+    margin:0 auto;
+}
+
+.entete {
+	background-color: var(--couleurfond);
+	color: var(--couleurtitre);
+	font-size: 1.4em;
+	height: 232px;
+	padding-right: 270px;
+}
+
+.entete h1 {
+	font: normal 3.2em serif,sans-serif;
+	padding: 62px 0 34px 0;
+}
+
+/* navigation */
+
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.navigation li {
+	font-size:2em;
+	float: left;
+}
+
+.navigation li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigation li a:hover {
+  color: var(--couleurlien);
+}
+
+/* footer */
+
+.footer {
+	position:fixed;
+	bottom: 0;
+	font-size: 1.1em;
+	padding-left: 2em;
+    padding-bottom:0;
+	text-align: left;
+	color: var(--couleurtexte);
+}
+								
