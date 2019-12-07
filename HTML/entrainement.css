@@ -1,0 +1,30 @@
+h1, h1+p {
+	text-align: right;
+	color:red;
+}
+
+h1 {
+	font-family: sans-serif;
+	text-transform: capitalize;
+}
+
+h2 {
+	background-color: #ccc;
+	font-size:1rem;
+}
+
+strong {
+	color:green;
+	text-decoration: underline;
+	font-weight:normal;
+}
+
+h3 {
+	font-variant:small-caps;
+	font-weight: normal;
+}
+
+h3 ~* strong {
+	color:inherit;
+	font-style: italic;
+}

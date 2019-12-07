@@ -88,6 +88,11 @@ $req->execute(array($surnom, $email, $pass_hache));
 $req->closeCursor(); // Termine le traitement de la requête
 
 $_SESSION['username'] = $surnom;
+
+$dem = $bdd->query('SELEct id FROM utilisateurs WHERE surnom="'.$_SESSION['username'].'"');
+$_SESSION['id'] = $dem->fetch();
+$dem->closeCursor();
+
 header('Location: ../accueil.php');
 
 ?>

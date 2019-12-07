@@ -1,6 +1,6 @@
 <?php
 session_start();
-	require "../parametres/identifiants.php";
+require "../parametres/identifiants.php";
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
@@ -13,12 +13,12 @@ if (empty($nom_groupe)){
 		$_SESSION['affiche_groupe'] = False;
 		header('Location: ../famille.php');
 		exit();
-}  else {
+} else {
 	$chaine='abcdefghijklmnopqrstuvwxyzABDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-	$melange=shuffle($chaine);
-	$ident=substr($melange‚ 0‚ 9);
+	$melange=str_shuffle($chaine);
+	$ident=substr($melange,0,9);
 	$_SESSION['messageId_groupe'] = '';
-	$_SESSION['messageNom_groupe'] = 'Groupe créé';
+	$_SESSION['messageNom_groupe'] = "Groupe créé, son identifiant: $ident";
 	$dem = $bdd->prepare('INSERT INTO groupes(id_g,nom_g) VALUES (?,?)');
 	$dem->execute(array($ident, $nom_groupe));
 	$dem->closeCursor();
