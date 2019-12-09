@@ -1,3 +1,10 @@
+<?php
+if(empty($_SESSION['username'])) {
+  Header('Location: index.php');
+  exit();
+}
+?>
+
 <header class="top">
 
 	<nav>
@@ -6,12 +13,13 @@
 			<li><a href="famille.php">Famille et groupes</a></li>
 			<li><a href="evenement.php">Evènements</a></li>
 			<li><a href="contact.php">Contact</a></li>
+			<li><a href="espaceperso.php">Mon espace</a></li>
 		</ul>
 	</nav>
 	
 	<section classe="deconnexion">
-		<p><?php echo $_SESSION['username']; echo 'sid= '.session_id().'Fsid';?></p>
-		<p><a href="traitement/deconnexion.php">Deconnexion</a></p>
+		<p><?php echo 'Bonjour ', $_SESSION['username']; ?></p>
+		<p><a href="traitement/deconnexionttt.php">Deconnexion</a></p>
 	</section>
 	
 
@@ -23,3 +31,4 @@
 </header>
 
 </html>
+	

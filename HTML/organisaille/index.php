@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -9,21 +5,20 @@ session_start();
 <head>
 	<meta charset="utf=8" />
 	<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
-	<title>Evènements</title>
+	<title>Entree</title>
 </head>
 
-<?php require("header.php"); ?>
+<?php require("headerbis.php"); ?>
 
 <main class="container">
 
 	<body>
 		
-		<h1>Evènements</h1>
-		<section class="groupe">
-			<h2>A venir</h2>
-			<p>Les évènements en cours d'organisation.</p>
-			<h2>Passés</h2>
-			<p>Les super évènements passés...</p>
+		<section classe="connexion">
+			<h2><a href="connexion.php">Connexion</a></h2>
+		</section>
+		<section classe="inscription">
+			<h2><a href="inscription.php">Inscription</a></h2>
 		</section>
 		
 	</body>

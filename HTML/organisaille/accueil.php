@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(empty($_SESSION['username'])) {
+  Header('Location: index.php');
+  exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +13,7 @@ session_start();
     <head>
     	<meta charset="utf=8" />
     	<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
-    	<title>Retrouvailles</title>
+    	<title>Accueil</title>
     </head>
     
 	<?php 
@@ -21,7 +25,7 @@ session_start();
     	<body>
 
     		<section>
-    			<h2>Presentation<?php echo $_SESSION['username']; ?></h2>
+    			<h2>Presentation</h2>
     			<p>Ici, je vous explique en détail à quoi sert ce site!</p>
 				<p>Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem sui.</p>
 				<p>Ibi victu recreati et quiete, postquam abierat timor, vicos opulentos adorti equestrium adventu cohortium, quae casu propinquabant, nec resistere planitie porrecta conati digressi sunt retroque concedentes omne iuventutis robur relictum in sedibus acciverunt.</p>

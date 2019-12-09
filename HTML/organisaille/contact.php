@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(empty($_SESSION['username'])) {
+  Header('Location: index.php');
+  exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +35,7 @@ session_start();
 						<input type="email" name="email" id="email" />
 						<br />
 						<br />
-						<label for="message">N'hésitez pas,je suis à l'écoute de tout commentaire:</label>
+						<label for="message">N'hésitez pas, je suis à l'écoute de tout commentaire:</label>
 						<br />
 						<textarea name="message" id="message" rows="10" cols="70"></textarea>
 						<br />
