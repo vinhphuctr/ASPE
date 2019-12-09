@@ -18,7 +18,7 @@ if(empty($_SESSION['username'])) {
 	</nav>
 	
 	<section classe="deconnexion">
-		<p><?php echo 'Bonjour ', $_SESSION['username']; ?></p>
+		<p><?php echo 'Bonjour ', $_SESSION['username'],$_SESSION['id']; ?></p>
 		<p><a href="traitement/deconnexionttt.php">Deconnexion</a></p>
 	</section>
 	

@@ -9,8 +9,9 @@ body
   max-width: 60rem;
 }
 
-.grandTitre {
+header h1 {
 	display: inline;
+	padding-bottom: 20px;
 }
 
 nav {

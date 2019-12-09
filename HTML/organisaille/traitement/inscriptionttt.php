@@ -89,8 +89,9 @@ $req->closeCursor(); // Termine le traitement de la requête
 
 $_SESSION['username'] = $surnom;
 
-$dem = $bdd->query('SELEct id FROM utilisateurs WHERE surnom="'.$_SESSION['username'].'"');
-$_SESSION['id'] = $dem->fetch();
+$dem = $bdd->query('SELEct * FROM utilisateurs WHERE surnom="'.$_SESSION['username'].'"');
+$sql = $dem->fetch();
+$_SESSION['id'] = $sql['id'];
 $dem->closeCursor();
 
 header('Location: ../accueil.php');

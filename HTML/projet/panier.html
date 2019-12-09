@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Mediconline</title>
+  </head>
+  
+  <body>
+	<header>
+		<h1>Bienvenue</h1>
+		<p>Sous-titre à écrire ici</p>
+	</header>
+	
+    <section>
+      <nav><ul>
+          <li><a href="index.html">Accueil</a></li>
+		  <li><a href="panier.html">Mon panier</a></li>
+		  <li><a href="presentation.html">Qui sommes-nous ?</a></li>
+          <li><a href="technique.html">Details techniques</a></li>
+      </ul></nav>
+    </section>
+	<section>
+		<a><img src="img/gingembre.jpeg" alt="photo de gingembre"/></a>
+		<h2>Nom du produit</h2>
+		<form method="post" action="panier.html">
+			 <p>Quelle quantité souhaitez-vous ? :<br />
+				<input type="radio" name="qte" value="1Kg" id="1Kg" /> <label for="1Kg">1 kg</label><br />
+				<input type="radio" name="qte" value="5Kg" id="5Kg" /> <label for="5Kg">5 kg</label><br />
+				<input type="radio" name="qte" value="10Kg" id="10Kg" /> <label for="10Kg">10 kg (on est malade ou on ne l'est pas)</label><br />
+				<input type="radio" name="qte" value="plus10" id="plus10" /> <label for="plus10">Encore plus que ça ?!</label>
+				<input type="text" name="qte" value="qteprecise" id="qteprecise" /><br />
+				<input type="submit" value="Ajouter au panier">
+			</p>
+		</form>
+		<form method="post" action="index.html">
+			<p>
+				<label>Souhaitez vous supprimer ce produit du panier et revenir à l'accueil ?</label>
+				<input type="submit" value="Supprimer du panier">
+			</p>
+		</form>
+		<p>Si vous souhaitez poursuivre vos achats, c'est<a href="index.html"> par ici ....</a></p>
+	</section>
+	
+	<section>
+		<form method="post" action="merci.html">
+		<fieldset>
+			<p>
+				<label for="livraison">Comment souhaitez-vous être livré ?</label><br />
+				<select name="livraison" id="livraison">
+					<option value="express">Livraison express (+3€)</option>
+					<option value="std">Livraison standard</option>
+				</select>
+			</p>
+			<p>
+				<label for="adresse">Quelle est votre adresse ?</label><br />
+				<textarea name="adresse" id="adresse" rows="5" cols="50"></textarea>
+			</p>
+			<p>
+				<label for="reglement">Quelle est votre mode de règlement ?</label><br />
+				<input type="radio" name="reglement" value="carte" id="carte" /> <label for="carte">Carte bancaire</label><br />
+				<input type="radio" name="reglement" value="espece" id="espece" /> <label for="espece">Espèces à la livraison</label><br />
+			</p>
+			<input type="submit" value="Valider" />
+		</fieldset>
+		</form>
+	</section>
+
+	<footer>
+		<p>Conditions generales d'utilisation de 39097 pages accessibles ici les heures impaires des anness bisextiles</p>
+	</footer>
+  </body>
+</html>

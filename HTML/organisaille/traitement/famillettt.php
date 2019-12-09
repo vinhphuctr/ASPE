@@ -27,7 +27,7 @@ if (empty($id_groupe)){
 		$_SESSION['messageNom_groupe'] = '';
 		$_SESSION['affiche_groupe'] = True;
 		$dem = $bdd->prepare('INSERT INTO appartenir(id_g,id) VALUES (?,?)');
-		$dem->execute(array($id_groupe, $_SESSION['id']));
+		$dem->execute(array('"'$id_groupe'"', $_SESSION['id']));
 		$dem->closeCursor();
 		header('Location: ../famille.php');
 		exit();
