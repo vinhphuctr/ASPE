@@ -43,7 +43,12 @@ else if (!(password_verify($pass_co, $pass_verif['pass'])))
 
 $dem->closeCursor();
 
-$S_SESSION['username']=$surnom_co;
+$_SESSION['username'] = $surnom_co;
+
+$dem = $bdd->query('SELEct id FROM utilisateurs WHERE surnom="'.$_SESSION['username'].'"');
+$_SESSION['id'] = $dem->fetch();
+$dem->closeCursor();
+
 header('Location: ../accueil.php');
 
 ?>
