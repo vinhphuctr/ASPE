@@ -1,4 +1,82 @@
-p
+/*@media screen and (max-width: */
+
+html {
+    --couleurtitre:#BBB;
+    --couleurtextenav:rgb(255,255,255);
+	--couleurlien:yellow;
+	--couleurfondnav:#16A085;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff) 
+       format('woff');
+}
+
+body {
+	display:grid;
+	grid-template-columns: 16% 7% 70% 7%;
+	grid-template-rows:20% 70% 10%;
+	font-family: Roboto;
+}
+
+p {
+	font-size: 1.1em;
+}
+
+header {
+	grid-column: 1/5;
+	grid-row: 1;
+	text-align:center;
+}
+
+nav
 {
-    color: blue;
+	grid-column: 1;
+	grid-row: 2;
+    font-size: 1.4em;
+}
+
+nav ul li {
+	list-style-type: none; 
+	border : solid;
+    background-color: var(--couleurfondnav);
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--couleurtextenav);
+}
+
+.corps {
+	grid-column: 2/4;
+	grid-row: 2;
+    font-size: 1.4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.photo {
+	width: 10em;
+	height: 10em;
+	overflow:hidden;
+	border-radius:50px;
+	margin:2em;
+}
+.pht{
+	display:flex;
+	justify-content: center;
+}
+
+form {
+	display: flex;
+	justify-content:center;
+}
+
+footer {
+	grid-column: 1/5;
+	grid-row: 3;
+	text-align:center;
 }
